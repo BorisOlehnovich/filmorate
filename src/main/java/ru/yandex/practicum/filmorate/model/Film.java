@@ -4,8 +4,8 @@ import jakarta.validation.constraints.*;
 import lombok.Data;
 import ru.yandex.practicum.filmorate.annotation.CurrentFilmDate;
 
-import java.time.Duration;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Data
 public class Film {
@@ -19,4 +19,5 @@ public class Film {
     private LocalDate releaseDate;
     @Positive(message = "Продолжительность фильма не может быть отрицательной")
     private int duration;
+    private Set<Integer> likes;
 }
